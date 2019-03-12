@@ -14,7 +14,7 @@ namespace VidzMike.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            var sArray = new string[] { "Mike", "Soares" };
+            var sArray = new string[] { "Mike", "Soares", "Sauro" };
             return sArray;
         }
 
@@ -22,13 +22,10 @@ namespace VidzMike.API.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            var sArray = new string[] { "Mike", "Soares" };
-            if (id > (sArray.Length - 1))
-            {
+            var sArray = new string[] { "Mike", "Soares", "Sauro" };
+             if (id > (sArray.Length - 1))
                 return "O valor digitado é maior do que o disponível";
-            }
-
-
+            
             return sArray[id];
         }
 
